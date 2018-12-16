@@ -18,24 +18,37 @@ class Home extends Component {
         this.play = this.play.bind(this)
         this.pause = this.pause.bind(this)
         this.sinopsis = this.sinopsis.bind(this)
+        this.hideSinopsis = this.hideSinopsis.bind(this)
     }
 
     pause() {
-        var iframe = document.querySelector('#mascaras');
-        var player = new Player(iframe);
-        player.pause();
+        const IFRAME = document.querySelector('#mascaras');
+        const PLAYER = new Player(IFRAME);
+        PLAYER.pause();
     }
 
     play() {
-        var iframe = document.querySelector('#mascaras');
-        var player = new Player(iframe);
-        player.play();
+        const IFRAME = document.querySelector('#mascaras');
+        const PLAYER = new Player(IFRAME);
+        PLAYER.play();
     }
 
     sinopsis() {
         const SINOPSIS = document.querySelector('#sinopsis')
         const IS_ON = sino.__is_on
+        const IFRAME = document.querySelector('#mascaras');
+        const PLAYER = new Player(IFRAME);
         SINOPSIS.classList.add(IS_ON)
+        PLAYER.pause();
+    }
+
+    hideSinopsis() {
+        const SINOPSIS = document.querySelector('#sinopsis')
+        const IS_ON = sino.__is_on
+        const IFRAME = document.querySelector('#mascaras');
+        const PLAYER = new Player(IFRAME);
+        SINOPSIS.classList.remove(IS_ON)
+        PLAYER.play();
     }
 
 
@@ -51,7 +64,8 @@ class Home extends Component {
                 />
             <Sinopsis
                 title="Máscaras de diablo"
-                sinopsis="Felipe Horta es un artesano originario de Tócuaro, Michoacán, dedicado a la elaboración de máscaras talladas en madera ya sea copal, copalillo o aguacate. Actualmente es uno de los artesanos más destacados en el estado debido a que pertenece a la 2da. generación de mascareros y es promotor de la danza de los Enguangonchados. Sus máscaras son muestra tanto de la tradición como de la imaginación del artesano."/>
+                sinopsis="Felipe Horta es un artesano originario de Tócuaro, Michoacán, dedicado a la elaboración de máscaras talladas en madera ya sea copal, copalillo o aguacate. Actualmente es uno de los artesanos más destacados en el estado debido a que pertenece a la 2da. generación de mascareros y es promotor de la danza de los Enguangonchados. Sus máscaras son muestra tanto de la tradición como de la imaginación del artesano."
+                buttonClick={this.hideSinopsis}/>
             <VimeoPlayer 
                 videoId= 'mascaras'
                 videoTitle= 'Máscaras de diablo'

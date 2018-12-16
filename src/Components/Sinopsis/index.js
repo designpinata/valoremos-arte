@@ -7,21 +7,10 @@ import utils from './../../utils.module.scss'
 import brand from './../../Assets/Brand/logo-black.svg'
 
 class Sinopsis extends Component {
-    constructor(props) {
-        super(props)
-        this.hideSinopsis = this.hideSinopsis.bind(this)
-    }
-
-    hideSinopsis() {
-        const SINOPSIS = document.querySelector('#sinopsis')
-        const IS_ON = styles.__is_on
-        SINOPSIS.classList.remove(IS_ON)
-    }
-
     render() {
         return (
             <section id="sinopsis" className={styles.__shape}>
-                <button onClick={this.hideSinopsis} className={styles.__close}>
+                <button onClick={this.props.buttonClick} className={styles.__close}>
                     <i className={styles.i_close}></i>
                 </button>
                 <section className={grid.container}>
