@@ -1,0 +1,65 @@
+@import './../../settings.scss';
+
+.__shape {
+    width: 100vw;
+    height: 100vh;
+    background: url('./../../Assets/Backgrounds/sino-mob.jpg')no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in 150ms;
+}
+
+.__br {
+    text-align: center;
+    max-width: 8.75rem;
+    width: 100%;
+}
+
+.__br img {
+    width: 100%;
+    display: inline-block;
+}
+
+.__li {
+    width: 4rem;
+    height: .125rem;
+    display: inline-block;
+    background: $c100;
+}
+
+.__close {
+    position: fixed;
+    appearance: none;
+    top: 1rem;
+    right: 0;
+    background: $c100;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    border-radius: 3rem 0 0 3rem;
+    padding: 0;
+    outline: 0;
+}
+
+.__is_on {
+    z-index: 9;
+    visibility: visible;
+    opacity: 1;
+}
+// Icons
+.i_close {
+    font-size: 2.5rem;
+    color: $c400;
+    margin-right: -.5rem;
+}
+.i_close:before {
+    content: "\e900";
+}

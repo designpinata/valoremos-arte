@@ -5,7 +5,7 @@ class VideoControls extends Component {
     render () {
         return (
             <nav className={styles.__shape}>
-                <button className={styles.__shape_i}>
+                <button onClick={this.props.sinopsis} className={styles.__shape_i}>
                     <small>
                         <strong>{this.props.label}</strong>
                     </small>

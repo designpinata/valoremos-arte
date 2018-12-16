@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import styles from './nav.module.scss'
-import utils from './../../utils.module.scss'
 
 class Navigation extends Component {
     render () {
