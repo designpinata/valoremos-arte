@@ -1,0 +1,44 @@
+@import './../../settings.scss';
+
+.__page {
+    width: 100vw;
+    height: 100vh;
+    background: url('./../../Assets/Backgrounds/inst-mob.jpg')no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in 300ms;
+}
+
+._is_on {
+    visibility: visible;
+    opacity: 1;
+}
+
+.i_headphones {
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    color: $c100;
+    position: relative;
+} 
+
+.__sound {
+    position: absolute;
+    top: calc(50% - 3rem);
+    left: calc(50% - 3rem);
+    width: 6rem;
+    height: 6rem;
+    opacity: .4;
+}
+
+.i_headphones:after {
+    content: "\e910";
+}

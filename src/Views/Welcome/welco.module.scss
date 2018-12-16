@@ -1,0 +1,32 @@
+@import './../../settings.scss';
+
+.__page {
+    width: 100vw;
+    height: 100vh;
+    background: url('./../../Assets/Backgrounds/intro-mob.jpg')no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.__brand {
+    max-width: 16rem;
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .__page {
+        background: url('./../../Assets/Backgrounds/intro-desk.jpg')no-repeat;
+        background-size: cover;
+    }
+    .__brand {
+        max-width: 20rem;
+        width: 100%;
+    }
+}

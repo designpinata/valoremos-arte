@@ -1,0 +1,61 @@
+@import './settings.scss';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+@font-face {
+    font-family: 'artesanias-icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Fonts/ar_mx.woff') format('woff');
+}
+
+
+h1 {
+    font-family: $font-family;
+    font-size: $h1;
+    line-height: $h1 + .5rem;
+    letter-spacing: 0;
+    font-weight: $regular;
+}
+
+h2 {
+    font-family: $font-family;
+    font-size: $h2;
+    line-height: $h2 + .5rem;
+    letter-spacing: 0;
+    font-weight: $regular;
+}
+
+h3 {
+    font-family: $font-family;
+    font-size: $h3;
+    line-height: $h3 + .5rem;
+    letter-spacing: 0;
+    font-weight: $regular;
+}
+
+p {
+    font-family: $font-family;
+    font-size: $p;
+    line-height: $p + .25rem;
+    letter-spacing: 0;
+    font-weight: $regular;
+}
+
+strong {
+    font-weight: $bold;
+}
+
+i {
+    font-family: $icons !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  

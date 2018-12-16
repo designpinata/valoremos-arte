@@ -1,0 +1,26 @@
+@import './../../settings.scss';
+
+.__bound {
+    padding-top: .5rem;
+}
+.__shape {
+    appearance: none;
+    background: $c200;
+    border: 0;
+    height: 3rem;
+    width: 100%;
+    border-radius: 3rem;
+    color: $c300_light;
+    transition: all 150ms ease-in;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    p {
+        line-height: 3rem;
+    }
+    &:hover {
+        background: $c200_light;
+        color: $c300;
+    }
+}
+

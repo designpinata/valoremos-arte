@@ -1,0 +1,54 @@
+@import './../../settings.scss';
+
+.__cont {
+    height: 3rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: $c400;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.__line {
+    background: $c300_light;
+    display: inline-block;
+    height: .125rem;
+    width: 1.5rem;
+    margin: 0 .5rem;
+}
+
+.__sha {
+    color: $c100;
+    text-decoration: none;
+    transition: color 150ms ease-in;
+    display: inline-block;
+    &:hover {
+        color: $c100_light;
+    }
+}
+
+.i_facebook, 
+.i_instagram,
+ {
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+
+.i_vimeo {
+    font-size: 1.5rem;
+}
+
+.i_facebook:before {
+    content: "\e901";
+}
+
+.i_instagram:before {
+    content: "\ea92";
+}
+.i_vimeo:before {
+    content: "\eaa0";
+}
