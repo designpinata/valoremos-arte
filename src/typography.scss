@@ -41,6 +41,14 @@ p {
     font-weight: $regular;
 }
 
+small {
+    font-family: $font-family;
+    font-size: $small;
+    line-height: $small + .25rem;
+    letter-spacing: 0;
+    font-weight: $bold;
+}
+
 strong {
     font-weight: $bold;
 }
