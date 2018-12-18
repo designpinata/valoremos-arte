@@ -15,7 +15,7 @@ import Orientation from '../../Components/Orientation';
 
 
 
-class Home extends Component {
+class Alfareria extends Component {
     constructor(props) {
         super(props);
 
@@ -98,23 +98,25 @@ class Home extends Component {
                 <AboutUs 
                     buttonClick={this.hideAbout}/>
                 <VideoControls 
-                    label="¿Qué es esta campaña?"
+                    label="Sinopsis de documental"
                     play={this.play}
                     pause={this.pause}
                     sinopsis={this.sinopsis}
                     />
                 <Sinopsis
-                    title="Valoremos el trabajo artesanal"
-                    sinopsis="Valoremos el Trabajo Artesanal busca concientizar a las personas generando un mayor aprecio por las artesanías, mostrando el valor inmaterial y cultural de cada una de ellas, a través de las manos de sus creadores se documentan los diferentes procesos por los que una pieza artesanal pasa antes de llegar a esos resultados finales majestuosos dignos de admirarse, de ser reconocidos y exhibidos a nivel internacional."
+                    title="Alfarería"
+                    sinopsis="Alfarería de acabado vidriado. Es una de las piezas más tradicionales de la región, conocidas como “piñas”, derivado del pastillaje tipo pellizco que van formando una superficie especial y ondulada."
                     buttonClick={this.hideSinopsis}/>
                 <VimeoPlayer 
                     videoId= 'mascaras'
-                    videoTitle= 'Máscaras de diablo'
-                    videoURL= 'https://player.vimeo.com/video/305599586?background=1&autoplay=1&loop=0&byline=0&title=0&muted=0'
+                    videoTitle= 'Alfarería'
+                    videoURL= 'https://player.vimeo.com/video/306242463?background=1&autoplay=1&loop=0&byline=0&title=0&muted=0'
                     muted= '1'/>
             </section>
         )
     }
 }
 
-export default Home
+export default Alfareria
+
+// Y si usamos botones para hacer que los usuarios reproduzcan el video

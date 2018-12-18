@@ -3,7 +3,7 @@
 .__shape {
     width: 100vw;
     height: 100vh;
-    background: url('./../../Assets/Backgrounds/sino-mob.jpg')no-repeat;
+    background: url('./../../Assets/Backgrounds/about-mob.jpg')no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -15,6 +15,22 @@
     visibility: hidden;
     opacity: 0;
     transition: all ease-in 150ms;
+}
+
+.__sp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.__sp_gr {
+    max-width: 40rem;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .__br {
@@ -53,6 +69,13 @@
     z-index: 10;
     visibility: visible;
     opacity: 1;
+}
+
+@media screen and (min-width: 1000px) {
+    .__shape {
+        background: url('./../../Assets/Backgrounds/about-desk.jpg')no-repeat;
+        background-size: cover;
+    }
 }
 // Icons
 .i_close {

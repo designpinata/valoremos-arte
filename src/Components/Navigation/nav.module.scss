@@ -8,6 +8,7 @@
     right: 0;
     top: 0;
     z-index: 10;
+    transition: all ease-in 500ms;
 }
 
 .__li {
@@ -18,15 +19,22 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    transition: all ease-in 500ms;
 } 
 
 .__au {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateX(-35px);
     display: inline-block;
-    width: 8rem;
+    width: 6rem;
     text-decoration: none;
     color: $c100;
     transition: color 150ms ease-in;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    text-align: right;
+    cursor: pointer;
     &:hover {
         color: $c100_light;
     }
@@ -43,7 +51,9 @@
     border-radius: 50%;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     color: $c100;
-    transition: color 150ms ease-in;
+    transition: all ease-in 500ms;
+    z-index: 2;
+    outline: 0;
     cursor: pointer;
     &:hover {
         color: $c400;
@@ -70,27 +80,41 @@
 
 .__videos {
     position: fixed;
-    width: 100%;
+    width: calc(100% - 3.5rem);
+    z-index: 1;
     height: 100%;
     top: 0;
-    right: 0;
+    right: calc(-100% + 3.5rem);
     background: url('./../../Assets/Backgrounds/episodes-mob.jpg')no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
+    transition: all ease-in 500ms;
+    padding-left: 3rem;
+
+    figcaption {
+        margin-top: .5rem;
+    }
 }
 
+.__vi_li {
+    flex-wrap: nowrap;
+    width: calc(100%);
+    overflow-x: auto;
+    touch-action: pan-x;
+}
 
 .__ep {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 12.5rem;
+    flex-direction: column;
     width: 100%;
     flex-wrap: wrap;
     text-decoration: none;
     margin-right: 1rem;
+    color: $c300_light;
 }
 
 .__div {
@@ -102,7 +126,6 @@
 }
 .__thumb {
     height: 9.25rem;
-    max-width: 12.5rem;
     width: 100%;
     border-radius: 1.5rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
@@ -116,6 +139,45 @@
     object-fit: cover;
 }
 
+.__menu_on {
+    &.__shape {
+        right: calc(100% - 3.5rem);
+    }
+    .__trig {
+        left: 1.5rem;
+    }
+    .__li {
+        visibility: hidden;
+        opacity: 0;
+    }
+    .i_menu:before {
+        content: "\e900";
+    }
+    .__videos {
+        right: 0;
+        
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .__videos {
+        background: url('./../../Assets/Backgrounds/episodes-desk.jpg')no-repeat;
+        background-position: center;
+        background-size: cover;
+        h3 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .__thumb {
+        height: 15.25rem;
+    }
+    .__ep {
+        margin-bottom: 2rem;
+    }
+}
 // Icon
 
 .i_lock {

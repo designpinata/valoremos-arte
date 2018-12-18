@@ -20,10 +20,10 @@ class Sinopsis extends Component {
                         </figure>
                     </section>
                     <section className={[grid.row, grid.center_xs].join(' ')}>
-                        <span className={[styles.__li].join(' ')}></span>
+                        <h3 className={[utils.c300_light, utils.center, grid.col_xs_10].join(' ')}>{this.props.title}</h3>
                     </section>
                     <section className={[grid.row, grid.center_xs, utils.m_b_16].join(' ')}>
-                        <h3 className={[utils.c300_light, utils.center, grid.col_xs_10].join(' ')}>{this.props.title}</h3>
+                        <span className={[styles.__li].join(' ')}></span>
                     </section>
                     <section className={[grid.row, grid.center_xs, utils.m_b_16].join(' ')}>
                         <p className={[utils.c300_light, utils.center, grid.col_xs_10].join(' ')}>{this.props.sinopsis}</p>

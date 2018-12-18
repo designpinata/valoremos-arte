@@ -9,12 +9,14 @@ import brand from './../../Assets/Brand/logo-white.svg'
 import Button from '../../Components/Button';
 import Share from '../../Components/Share';
 import Loader from '../../Components/Loader';
+import Orientation from '../../Components/Orientation';
 
 
 class Introduction extends Component {
     render () {
         return (
             <section className={styles.__page}>
+                <Orientation />
                 <Loader />
                 <section className={grid.container}>
                     <section className={[grid.row, grid.center_xs].join(' ')}>
@@ -24,7 +26,7 @@ class Introduction extends Component {
                                 <Button 
                                     type="link"
                                     url="/home"
-                                    label="Conocer Experiencia"
+                                    label="Disfruta los documentales"
                                     />
                             </figcaption>
                         </figure>

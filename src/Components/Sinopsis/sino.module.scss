@@ -54,6 +54,13 @@
     visibility: visible;
     opacity: 1;
 }
+
+@media screen and (min-width: 1000px) {
+    .__shape {
+        background: url('./../../Assets/Backgrounds/sino-desk.jpg')no-repeat;
+        background-size: cover;
+    }
+}
 // Icons
 .i_close {
     font-size: 2.5rem;

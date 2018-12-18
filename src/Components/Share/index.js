@@ -7,7 +7,7 @@ class Share extends Component {
         return (
             <section className={styles.__cont}>
                 <p className={utils.c100}>
-                    <strong>Comparte</strong>
+                    <strong>Síguenos</strong>
                 </p>
                 <span className={styles.__line}></span>
                 <a 

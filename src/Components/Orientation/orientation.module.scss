@@ -1,0 +1,15 @@
+@import './../../settings.scss';
+
+@media screen and (orientation: portrait){
+    .__shape {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $c100 url('./../../Assets/Icons/orientation.gif')no-repeat;
+        background-size: 50%;
+        background-position: center center;
+        z-index: 9999999;
+    }
+}

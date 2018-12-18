@@ -15,7 +15,7 @@ import Orientation from '../../Components/Orientation';
 
 
 
-class Home extends Component {
+class Canteria extends Component {
     constructor(props) {
         super(props);
 
@@ -98,23 +98,25 @@ class Home extends Component {
                 <AboutUs 
                     buttonClick={this.hideAbout}/>
                 <VideoControls 
-                    label="¿Qué es esta campaña?"
+                    label="Sinopsis de documental"
                     play={this.play}
                     pause={this.pause}
                     sinopsis={this.sinopsis}
                     />
                 <Sinopsis
-                    title="Valoremos el trabajo artesanal"
-                    sinopsis="Valoremos el Trabajo Artesanal busca concientizar a las personas generando un mayor aprecio por las artesanías, mostrando el valor inmaterial y cultural de cada una de ellas, a través de las manos de sus creadores se documentan los diferentes procesos por los que una pieza artesanal pasa antes de llegar a esos resultados finales majestuosos dignos de admirarse, de ser reconocidos y exhibidos a nivel internacional."
+                    title="Cantería"
+                    sinopsis="La conversión de la piedra es un arte que las antiguas culturas mesoamericanas practicaban afanosamente. El brillo, la superficie y la dureza hacían que cada piedra fuera tratada para un objetivo. En el caso de la cantera y el mármol, su elegancia fue imprescindible para los palacios y las moradas de príncipes y gobernantes. La noble tarea se difundió en la región, trayendo a la vida cotidiana fastuosas columnas, escritorios, figuras decorativas y otros elementos. Se trata de una actividad donde la fortaleza combina a la perfección con la estética y el lujo. La cantería está presente tanto en la escultura como en la arquitectura, Morelia es el claro ejemplo de ello, con sus calles adornadas de cantera rosa."
                     buttonClick={this.hideSinopsis}/>
                 <VimeoPlayer 
                     videoId= 'mascaras'
-                    videoTitle= 'Máscaras de diablo'
-                    videoURL= 'https://player.vimeo.com/video/305599586?background=1&autoplay=1&loop=0&byline=0&title=0&muted=0'
+                    videoTitle= 'Valoremos el trabajo artesanal - Cantería'
+                    videoURL= 'https://player.vimeo.com/video/306254959?background=1&autoplay=1&loop=0&byline=0&title=0&muted=0'
                     muted= '1'/>
             </section>
         )
     }
 }
 
-export default Home
+export default Canteria
+
+// Y si usamos botones para hacer que los usuarios reproduzcan el video

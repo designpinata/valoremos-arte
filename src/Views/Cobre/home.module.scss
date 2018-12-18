@@ -1,0 +1,45 @@
+@import './../../settings.scss';
+.__page {
+    height: 100vh;
+    width: 100vw;
+    background: $c300;
+}
+
+.__mobhelp {
+    position: fixed;
+    background: rgba(#212121, .7);
+    width: calc(100% - 3.5rem);
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+    transition: all ease-in 400ms;
+    z-index: 5;
+}
+.__is_playing {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -10;
+}
+.__play_m {
+    appearance: none;
+    background: transparent;
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    border: 0;
+}
+
+// Icons
+.i_play {
+    font-size: 4rem;
+    color: $c200;
+}
+
+.i_play:before {
+    content: "\e904";
+}

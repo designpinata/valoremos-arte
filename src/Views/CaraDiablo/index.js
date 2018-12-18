@@ -15,7 +15,7 @@ import Orientation from '../../Components/Orientation';
 
 
 
-class Home extends Component {
+class CaraDiablo extends Component {
     constructor(props) {
         super(props);
 
@@ -98,23 +98,23 @@ class Home extends Component {
                 <AboutUs 
                     buttonClick={this.hideAbout}/>
                 <VideoControls 
-                    label="¿Qué es esta campaña?"
+                    label="Sinopsis de documental"
                     play={this.play}
                     pause={this.pause}
                     sinopsis={this.sinopsis}
                     />
                 <Sinopsis
-                    title="Valoremos el trabajo artesanal"
-                    sinopsis="Valoremos el Trabajo Artesanal busca concientizar a las personas generando un mayor aprecio por las artesanías, mostrando el valor inmaterial y cultural de cada una de ellas, a través de las manos de sus creadores se documentan los diferentes procesos por los que una pieza artesanal pasa antes de llegar a esos resultados finales majestuosos dignos de admirarse, de ser reconocidos y exhibidos a nivel internacional."
+                    title="Máscaras de diablo de Tócuaro Michoacán"
+                    sinopsis="Desde la conquista hasta la revolución, la lucha interminable del bien contra el mal ha estado representada en las tradiciones dancísticas de México. Felipe Horta trabaja desde hace 30 años como muchos otros artesanos creando las máscaras y atuendos que dan identidad a estas tradiciones en Michoacán."
                     buttonClick={this.hideSinopsis}/>
                 <VimeoPlayer 
                     videoId= 'mascaras'
                     videoTitle= 'Máscaras de diablo'
-                    videoURL= 'https://player.vimeo.com/video/305599586?background=1&autoplay=1&loop=0&byline=0&title=0&muted=0'
+                    videoURL= 'https://player.vimeo.com/video/306265959?background=1&autoplay=1&loop=0&byline=0&title=0&muted=0'
                     muted= '1'/>
             </section>
         )
     }
 }
 
-export default Home
+export default CaraDiablo

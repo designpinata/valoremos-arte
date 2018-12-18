@@ -4,21 +4,29 @@ import styles from './nav.module.scss'
 import grid from './../../grid.module.scss'
 import utils from './../../utils.module.scss'
 
+// Assets
+import cobre from './../../Assets/Thumbs/cobre.jpg'
+import cantera from './../../Assets/Thumbs/cantera.jpg'
+import alfareria from './../../Assets/Thumbs/alfareria.jpg'
+import mascara from './../../Assets/Thumbs/mascara.jpg'
+
 class Navigation extends Component {
     constructor(props) {
         super(props)
-        this.aboutUs = this.aboutUs.bind(this)
+        this.episodesOn = this.episodesOn.bind(this)
     }
 
-    aboutUs () {
-
+    episodesOn () {
+        const NAVBAR = document.querySelector('#nav')
+        const MENU_ACTIVE = styles.__menu_on
+        NAVBAR.classList.toggle(MENU_ACTIVE);
     }
     
     render () {
         return (
-            <section className={styles.__shape}>
-                <button className={styles.__trig}>
-                    <i className={styles.i_lock}></i>
+            <section id="nav" className={[styles.__shape].join(' ')}>
+                <button onClick={this.episodesOn} className={styles.__trig}>
+                    <i className={styles.i_menu}></i>
                 </button>
 
                 <nav className={styles.__li}>
@@ -54,53 +62,65 @@ class Navigation extends Component {
                         </a>
                     </section>
                 </nav>
-                {/* <section className={styles.__videos}>
-                    <section className={grid.container}>
+                <section className={[styles.__videos].join(' ')}>
+                    <section className={grid.container_fluid}>
                     <section className={grid.row}>
                         <h3 className={[utils.c300_light, grid.col_xs_12].join(' ')}>
                             <strong>Documentales</strong>
                         </h3>
                     </section>
-                    <section className={grid.row}>
-                        <Link to="/" className={styles.__ep}>
+                    <section className={[grid.row, styles.__vi_li].join(' ')}>
+                        <Link to="/cara-diablo" className={[styles.__ep, grid.col_xs_4].join(' ')}>
                             <figure className={styles.__thumb}>
-                                <img src='https://via.placeholder.com/400x200'/>
+                                <img src={mascara} alt="Valoremos el trabajo artesanal - Máscaras de diablo de Tócuaro Michoacán"/>
                             </figure>
-                            <figcaption className={grid.row}>
-                                <p className={grid.col_xs_12}><strong>Valoremos el Trabajo Artesanal</strong></p>
+                            <figcaption className={[grid.row, grid.top_xs].join(' ')}>
+                                <p className={grid.col_xs_12}><strong>Cara de Diablo</strong></p>
                                 <section className={grid.col_xs_12}>
                                     <span className={styles.__div}></span>
                                 </section>
-                                <small className={grid.col_xs_12}>"Valoremos el Trabajo Artesanal" busca concientizar a las personas generando un mayor...</small>
+                                <small className={grid.col_xs_12}>Desde la conquista hasta la revolución, la lucha interminable del bien contra el mal ha estado representada en las tradiciones dancísticas de México.</small>
                             </figcaption>
                         </Link>
-                        <Link to="/" className={styles.__ep}>
+                        <Link to="/cobre" className={[styles.__ep, grid.col_xs_4].join(' ')}>
                             <figure className={styles.__thumb}>
-                                <img src='https://via.placeholder.com/400x200'/>
+                                <img src={cobre} alt="Valoremos el trabajo artesanal - Cobre"/>
                             </figure>
-                            <figcaption className={grid.row}>
-                                <p className={grid.col_xs_12}><strong>Valoremos el Trabajo Artesanal</strong></p>
+                            <figcaption className={[grid.row, grid.top_xs].join(' ')}>
+                                <p className={grid.col_xs_12}><strong>Cobre</strong></p>
                                 <section className={grid.col_xs_12}>
                                     <span className={styles.__div}></span>
                                 </section>
-                                <small className={grid.col_xs_12}>"Valoremos el Trabajo Artesanal" busca concientizar a las personas generando un mayor...</small>
+                                <small className={grid.col_xs_12}>Pionero en la evolución del cazo de cobre martillado a la escultura de cobre o plata martillado.</small>
                             </figcaption>
                         </Link>
-                        <Link to="/" className={styles.__ep}>
+                        <Link to="/canteria" className={[styles.__ep, grid.col_xs_4].join(' ')}>
                             <figure className={styles.__thumb}>
-                                <img src='https://via.placeholder.com/400x200'/>
+                                <img src={cantera} alt="Valoremos el trabajo artesanal - cantera"/>
                             </figure>
-                            <figcaption className={grid.row}>
-                                <p className={grid.col_xs_12}><strong>Valoremos el Trabajo Artesanal</strong></p>
+                            <figcaption className={[grid.row, grid.top_xs].join(' ')}>
+                                <p className={grid.col_xs_12}><strong>Cantería</strong></p>
                                 <section className={grid.col_xs_12}>
                                     <span className={styles.__div}></span>
                                 </section>
-                                <small className={grid.col_xs_12}>"Valoremos el Trabajo Artesanal" busca concientizar a las personas generando un mayor...</small>
+                                <small className={grid.col_xs_12}>La conversión de la piedra es un arte que las antiguas culturas mesoamericanas practicaban afanosamente.</small>
                             </figcaption>
                         </Link> 
+                        <Link to="/alfareria" className={[styles.__ep, grid.col_xs_4].join(' ')}>
+                            <figure className={styles.__thumb}>
+                                <img src={alfareria} alt="Valoremos el trabajo artesanal - alfarería"/>
+                            </figure>
+                            <figcaption className={[grid.row, grid.top_xs].join(' ')}>
+                                <p className={grid.col_xs_12}><strong>Alfarería</strong></p>
+                                <section className={grid.col_xs_12}>
+                                    <span className={styles.__div}></span>
+                                </section>
+                                <small className={grid.col_xs_12}>Es una de las piezas más tradicionales de la región, conocidas como “piñas”, derivado del pastillaje tipo pellizco que van formando una superficie especial y ondulada.</small>
+                            </figcaption>
+                        </Link>
                     </section>
                     </section>
-                </section> */}
+                </section>
             </section>
         )
     }

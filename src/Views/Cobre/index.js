@@ -15,7 +15,7 @@ import Orientation from '../../Components/Orientation';
 
 
 
-class Home extends Component {
+class Cobre extends Component {
     constructor(props) {
         super(props);
 
@@ -98,23 +98,31 @@ class Home extends Component {
                 <AboutUs 
                     buttonClick={this.hideAbout}/>
                 <VideoControls 
-                    label="¿Qué es esta campaña?"
+                    label="Sinopsis de documental"
                     play={this.play}
                     pause={this.pause}
                     sinopsis={this.sinopsis}
                     />
                 <Sinopsis
-                    title="Valoremos el trabajo artesanal"
-                    sinopsis="Valoremos el Trabajo Artesanal busca concientizar a las personas generando un mayor aprecio por las artesanías, mostrando el valor inmaterial y cultural de cada una de ellas, a través de las manos de sus creadores se documentan los diferentes procesos por los que una pieza artesanal pasa antes de llegar a esos resultados finales majestuosos dignos de admirarse, de ser reconocidos y exhibidos a nivel internacional."
+                    title="Cobre"
+                    sinopsis="Originario de Santa Clara del cobre Michoacán, el 17 de septiembre de 1955.
+                    Inició su trabajo artesanal muy joven, a los 13 años ganó su primer concurso.
+                    Ha obtenido 22 galardones nacionales en el trabajo del cobre y la plata. Y muchos primeros
+                    lugares y premios especiales en diferentes concursos a nivel nacional.
+                    Ha expuesto su obra en diferentes países como Estados Unidos de América, Chile y Perú.
+                    Además algunas de sus piezas son colecciones particulares y otras se encuentran en museos y galerías de prestigio a nivel nacional e internacional.
+                    Pionero en la evolución del cazo de cobre martillado a la escultura de cobre o plata martillado."
                     buttonClick={this.hideSinopsis}/>
                 <VimeoPlayer 
                     videoId= 'mascaras'
-                    videoTitle= 'Máscaras de diablo'
-                    videoURL= 'https://player.vimeo.com/video/305599586?background=1&autoplay=1&loop=0&byline=0&title=0&muted=0'
+                    videoTitle= 'Valoremos el trabajo artesanal - Alfarería (piñas vidriadas)'
+                    videoURL= 'https://player.vimeo.com/video/306219439?background=1&autoplay=1&loop=0&byline=0&title=0&muted=0'
                     muted= '1'/>
             </section>
         )
     }
 }
 
-export default Home
+export default Cobre
+
+// Y si usamos botones para hacer que los usuarios reproduzcan el video
