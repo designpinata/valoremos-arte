@@ -13,6 +13,11 @@ import Sinopsis from '../../Components/Sinopsis';
 import AboutUs from '../../Components/AboutUs';
 import Orientation from '../../Components/Orientation';
 
+import ReactGA from 'react-ga';
+ReactGA.set({ page: window.location.pathname })
+ReactGA.pageview(window.location.pathname)
+
+
 
 
 class Home extends Component {

@@ -13,26 +13,29 @@ import Cobre from './Views/Cobre';
 import Canteria from './Views/Canteria';
 import Alfareria from './Views/Alfareria';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-131130246-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
     <BrowserRouter>
         <Route
-                render={({ location }) => (
-                  <TransitionGroup>
-                    <CSSTransition key={location.key} timeout={300} classNames='fade'>
-                      <Switch>
-                        <Route exact path='/' component={Introduction}/>
-                        <Route exact path='/home' component={Home}/>
-                        <Route exact path='/cara-diablo' component={CaraDiablo}/>
-                        <Route exact path='/cobre' component={Cobre}/>
-                        <Route exact path='/canteria' component={Canteria}/>
-                        <Route exact path='/alfareria' component={Alfareria}/>
-                        <Route component={()=> (<h1>Nothing here!</h1>)}/>
-                      </Switch>
-                    </CSSTransition>
-                  </TransitionGroup>
-                )}
-              />
+            render={({ location }) => (
+                <TransitionGroup>
+                <CSSTransition key={location.key} timeout={300} classNames='fade'>
+                    <Switch>
+                    <Route exact path='/' component={Introduction}/>
+                    <Route exact path='/home' component={Home}/>
+                    <Route exact path='/cara-diablo' component={CaraDiablo}/>
+                    <Route exact path='/cobre' component={Cobre}/>
+                    <Route exact path='/canteria' component={Canteria}/>
+                    <Route exact path='/alfareria' component={Alfareria}/>
+                    <Route component={()=> (<h1>Nothing here!</h1>)}/>
+                    </Switch>
+                </CSSTransition>
+                </TransitionGroup>
+            )}
+            />
     </BrowserRouter>
     , document.getElementById('root'));
 

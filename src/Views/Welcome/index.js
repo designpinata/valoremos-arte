@@ -12,6 +12,12 @@ import Loader from '../../Components/Loader';
 import Orientation from '../../Components/Orientation';
 
 
+import ReactGA from 'react-ga';
+ReactGA.set({ page: window.location.pathname })
+ReactGA.pageview(window.location.pathname)
+
+
+
 class Introduction extends Component {
     render () {
         return (
