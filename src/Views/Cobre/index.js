@@ -28,8 +28,75 @@ class Cobre extends Component {
         this.sinopsis = this.sinopsis.bind(this)
         this.hideSinopsis = this.hideSinopsis.bind(this)
         this.AboutUs = this.AboutUs.bind(this)
-        this.hideAbout = this.hideAbout.bind(this)
+        this.toggleFullscreen = this.toggleFullscreen.bind(this)
     }
+
+    toggleFullscreen() {
+        console.log('FS')
+        var fullscreenChange = null;
+            // other vars …
+    
+        // Check for fullscreen support
+        if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+    
+            // If there's currently an element fullscreen, exit fullscreen
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+    
+            // Do stuff when the video exits fullscreen mode
+            // …
+        } else {
+            const IFRAME = document.querySelector('#mascaras');
+            // Otherwise, enter fullscreen
+            // `videoWrapper` is just a `div` element wrapping the video
+            if (IFRAME.requestFullscreen) {
+                IFRAME.requestFullscreen();
+            } else if (IFRAME.mozRequestFullScreen) {
+                IFRAME.mozRequestFullScreen();
+            } else if (IFRAME.webkitRequestFullscreen) {
+                IFRAME.webkitRequestFullscreen();
+            } else if (IFRAME.msRequestFullscreen) {
+                IFRAME.msRequestFullscreen();
+            }
+    
+            // Do stuff when the video enters fullscreen mode
+            // …
+        }
+    
+        fullscreenChange = function() {
+    
+            // Do something on fullscreen change event
+            // …
+        };
+    
+        document.onfullscreenchange = function() {
+            if (!document.fullscreenElement) {
+                fullscreenChange();
+            }
+        };
+        document.onwebkitfullscreenchange = function() {
+            if (!document.webkitFullscreenElement) {
+                fullscreenChange();
+            }
+        };
+        document.onmozfullscreenchange = function() {
+            if (!document.mozFullScreenElement) {
+                fullscreenChange();
+            }
+        };
+        document.onmsfullscreenchange = function() {
+            if (!document.msFullscreenElement) {
+                fullscreenChange();
+            }
+        };
+    };
 
     AboutUs() {
         const ABOUT = document.querySelector('#about')
