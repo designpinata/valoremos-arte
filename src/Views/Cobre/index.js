@@ -106,6 +106,7 @@ class Cobre extends Component {
                     play={this.play}
                     pause={this.pause}
                     sinopsis={this.sinopsis}
+                    fscreen={this.toggleFullscreen}
                     />
                 <Sinopsis
                     title="Cobre"
