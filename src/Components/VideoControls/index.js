@@ -17,6 +17,8 @@ class VideoControls extends Component {
                     <button onClick={this.props.pause} className={styles.__but}>
                         <i className={styles.i_pause}></i>
                     </button>
+                    <button className={styles.__but} onClick={this.props.fscreen}>
+                    <i className={styles.i_enlarge}></i></button>
                 </section>
             </nav>
         )

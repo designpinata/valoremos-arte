@@ -2,15 +2,6 @@ import React, {Component} from 'react'
 import styles from './video.module.scss'
 
 class VimeoPlayer extends Component {
-    // Detect if data saver is enabled
-    componentWillMount() {
-		if ('connection' in navigator) {
-			// Detect if save data is enabled
-			if (navigator.connection.saveData === true) {
-				alert(`Your save data mode is enabled, please disable for a better experience`)
-			}
-		}
-	}
     render() {
         return (
             <section className={styles.__slide}>
