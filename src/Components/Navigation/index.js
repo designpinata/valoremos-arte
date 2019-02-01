@@ -83,7 +83,7 @@ class Navigation extends Component {
                                 <small className={grid.col_xs_12}>Desde la conquista hasta la revolución, la lucha interminable del bien contra el mal ha estado representada en las tradiciones dancísticas de México.</small>
                             </figcaption>
                         </Link>
-                        <Link to="/rebozos" className={[styles.__ep, grid.col_xs_4].join(' ')}>
+                        <Link to="" style={{pointerEvents: 'none', cursor: 'not-allowed'}}className={[styles.__ep, grid.col_xs_4].join(' ')}>
                             <figure className={styles.__thumb}>
                                 <img src={rebozos} alt="Valoremos el trabajo artesanal - Rebozos de pluma de ave"/>
                             </figure>
