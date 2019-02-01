@@ -160,11 +160,11 @@ class Cobre extends Component {
             <section className={styles.__page}>
                 <Orientation/>
                 {/* Autoplaying is not working on mobile */}
-                <MobileView viewClassName={[styles.__mobhelp, `mob_helper`].join(' ')}>
+                {/* <MobileView viewClassName={[styles.__mobhelp, `mob_helper`].join(' ')}>
                     <button onClick={this.playMob} className={styles.__play_m}>
                         <i className={styles.i_play}></i>
                     </button>
-                </MobileView>
+                </MobileView> */}
                 <Navigation about={this.AboutUs}/>
                 <AboutUs 
                     buttonClick={this.hideAbout}/>
