@@ -12,6 +12,7 @@ import CaraDiablo from './Views/CaraDiablo';
 import Cobre from './Views/Cobre';
 import Canteria from './Views/Canteria';
 import Alfareria from './Views/Alfareria';
+import Rebozos from './Views/Rebozos';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-131130246-1');
@@ -30,6 +31,7 @@ ReactDOM.render(
                     <Route exact path='/cobre' component={Cobre}/>
                     <Route exact path='/canteria' component={Canteria}/>
                     <Route exact path='/alfareria' component={Alfareria}/>
+                    <Route exact path='/rebozos' component={Rebozos}/>
                     <Route component={()=> (<h1>Nothing here!</h1>)}/>
                     </Switch>
                 </CSSTransition>
@@ -42,4 +44,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.register();

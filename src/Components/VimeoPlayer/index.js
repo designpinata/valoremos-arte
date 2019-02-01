@@ -6,7 +6,7 @@ class VimeoPlayer extends Component {
         return (
             <section className={styles.__slide}>
                 <iframe 
-                // allow="autoplay"
+                allow="autoplay"
                 id={this.props.videoId}
                 title={this.props.videoTitle} 
                 src={this.props.videoURL}

@@ -3,6 +3,8 @@
     top: 0;
     right: 0;
     bottom: 0;
+    width: calc(100vw - 56px);
+    height: 100vh;
     left: 0;
     overflow: hidden;
     pointer-events: none;
@@ -12,7 +14,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: calc(100vw - 56px);
     height: 100vw;
     pointer-events: none;
 }

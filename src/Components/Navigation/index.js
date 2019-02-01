@@ -9,6 +9,7 @@ import cobre from './../../Assets/Thumbs/cobre.jpg'
 import cantera from './../../Assets/Thumbs/cantera.jpg'
 import alfareria from './../../Assets/Thumbs/alfareria.jpg'
 import mascara from './../../Assets/Thumbs/mascara.jpg'
+import rebozos from './../../Assets/Thumbs/rebozos.jpg'
 
 class Navigation extends Component {
     constructor(props) {
@@ -80,6 +81,18 @@ class Navigation extends Component {
                                     <span className={styles.__div}></span>
                                 </section>
                                 <small className={grid.col_xs_12}>Desde la conquista hasta la revolución, la lucha interminable del bien contra el mal ha estado representada en las tradiciones dancísticas de México.</small>
+                            </figcaption>
+                        </Link>
+                        <Link to={''} style={{pointerEvents: 'none', cursor: 'not-allowed'}} className={[styles.__ep, grid.col_xs_4].join(' ')}>
+                            <figure className={styles.__thumb}>
+                                <img src={rebozos} alt="Valoremos el trabajo artesanal - Rebozos de pluma de ave"/>
+                            </figure>
+                            <figcaption className={[grid.row, grid.top_xs].join(' ')}>
+                                <p className={grid.col_xs_12}><strong>Rebozos de Plumas de Aves</strong></p>
+                                <section className={grid.col_xs_12}>
+                                    <span className={styles.__div}></span>
+                                </section>
+                                <small className={grid.col_xs_12}>K’uaníndikua” es el documental en el que se narra la historia de Albertina Bautista y su familia.</small>
                             </figcaption>
                         </Link>
                         <Link to="/cobre" className={[styles.__ep, grid.col_xs_4].join(' ')}>
