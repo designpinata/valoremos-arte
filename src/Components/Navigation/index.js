@@ -85,10 +85,13 @@ class Navigation extends Component {
                         </Link>
                         <Link to="/rebozos" className={[styles.__ep, grid.col_xs_4].join(' ')}>
                             <figure className={styles.__thumb}>
+                                <figcaption className={styles.__badge}>
+                                    <small className={grid.col_xs_12}>ESTRENO</small>
+                                </figcaption>
                                 <img src={rebozos} alt="Valoremos el trabajo artesanal - Rebozos de pluma de ave"/>
                             </figure>
                             <figcaption className={[grid.row, grid.top_xs].join(' ')}>
-                                <p className={grid.col_xs_12}><strong>Rebozos de Plumas de Aves</strong></p>
+                                <p className={grid.col_xs_12}><strong>Rebozos con Plumas de Aves</strong></p>
                                 <section className={grid.col_xs_12}>
                                     <span className={styles.__div}></span>
                                 </section>
