@@ -10,6 +10,7 @@ import cantera from './../../Assets/Thumbs/cantera.jpg'
 import alfareria from './../../Assets/Thumbs/alfareria.jpg'
 import mascara from './../../Assets/Thumbs/mascara.jpg'
 import rebozos from './../../Assets/Thumbs/rebozos.jpg'
+import figuras from './../../Assets/Thumbs/figuras.jpg'
 
 class Navigation extends Component {
     constructor(props) {
@@ -71,6 +72,21 @@ class Navigation extends Component {
                         </h3>
                     </section>
                     <section className={[grid.row, styles.__vi_li].join(' ')}>
+                    <Link to="/figuras" className={[styles.__ep, grid.col_xs_4].join(' ')}>
+                            <figure className={styles.__thumb}>
+                            <figcaption className={styles.__badge}>
+                                    <small className={grid.col_xs_12}>ESTRENO</small>
+                                </figcaption>
+                                <img src={figuras} alt="Valoremos el trabajo artesanal - Máscaras de diablo de Tócuaro Michoacán"/>
+                            </figure>
+                            <figcaption className={[grid.row, grid.top_xs].join(' ')}>
+                                <p className={grid.col_xs_12}><strong>Mario Agustín</strong></p>
+                                <section className={grid.col_xs_12}>
+                                    <span className={styles.__div}></span>
+                                </section>
+                                <small className={grid.col_xs_12}>El artesano Mario Agustín y su familia trabajan 3 técnicas artesanales de gran herencia histórica para la cultura Purépecha.</small>
+                            </figcaption>
+                        </Link>
                         <Link to="/cara-diablo" className={[styles.__ep, grid.col_xs_4].join(' ')}>
                             <figure className={styles.__thumb}>
                                 <img src={mascara} alt="Valoremos el trabajo artesanal - Máscaras de diablo de Tócuaro Michoacán"/>
@@ -85,9 +101,6 @@ class Navigation extends Component {
                         </Link>
                         <Link to="/rebozos" className={[styles.__ep, grid.col_xs_4].join(' ')}>
                             <figure className={styles.__thumb}>
-                                <figcaption className={styles.__badge}>
-                                    <small className={grid.col_xs_12}>ESTRENO</small>
-                                </figcaption>
                                 <img src={rebozos} alt="Valoremos el trabajo artesanal - Rebozos de pluma de ave"/>
                             </figure>
                             <figcaption className={[grid.row, grid.top_xs].join(' ')}>

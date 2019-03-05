@@ -15,6 +15,7 @@ import Alfareria from './Views/Alfareria';
 import Rebozos from './Views/Rebozos';
 
 import ReactGA from 'react-ga';
+import Figuras from './Views/Figuras';
 ReactGA.initialize('UA-131130246-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -27,6 +28,7 @@ ReactDOM.render(
                     <Switch>
                     <Route exact path='/' component={Introduction}/>
                     <Route exact path='/home' component={Home}/>
+                    <Route exact path='/figuras' component={Figuras}/>
                     <Route exact path='/cara-diablo' component={CaraDiablo}/>
                     <Route exact path='/cobre' component={Cobre}/>
                     <Route exact path='/canteria' component={Canteria}/>
